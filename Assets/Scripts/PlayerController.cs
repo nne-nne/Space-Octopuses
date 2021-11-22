@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Ta klasa opisuje zachowanie postaci sterowanej przez gracza
 public class PlayerController : MonoBehaviour
 {
     /// <summary>
@@ -15,6 +16,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public float speed;
     public float rotationSpeed;
+
+    public int coins;
 
     /// <summary>
     /// komponent Rigidbody pozwala na fizyczne symulowanie zachowania ciała, a także dostarcza wielu przydatnych funkcji
