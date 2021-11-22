@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         ///Input.GetAxis("Vertical") zwraca liczbę od -1 do 1 w zależności od tego,
         ///czy gracz wcisnął klawisze W,S albo UP_ARROW, DOWN_ARROW
         ///Analogiczne oś "Horizontal" to A,D, strzałka w lewo i strzałka w prawo
-        rb.AddForce(transform.forward * Input.GetAxis("Vertical") * speed, ForceMode.VelocityChange)
+        rb.AddForce(transform.forward * Input.GetAxis("Vertical") * speed, ForceMode.VelocityChange);
         transform.Rotate(0f, Input.GetAxis("Horizontal") * rotationSpeed, 0f);
     }
 }
