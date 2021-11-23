@@ -40,4 +40,13 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(transform.forward * Input.GetAxis("Vertical") * speed, ForceMode.VelocityChange);
         transform.Rotate(0f, Input.GetAxis("Horizontal") * rotationSpeed, 0f);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        /// wykorzystanie warstw do rozróżniania obiektów
+        if(collision.gameObject.layer == LayerMask.NameToLayer("DontTouch"))
+        {
+            Debug.Log("AŁA!");
+        }
+    }
 }
